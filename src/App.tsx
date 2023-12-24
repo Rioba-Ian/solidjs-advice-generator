@@ -1,4 +1,4 @@
-import {createResource, createSignal, ErrorBoundary, Show} from "solid-js";
+import {createResource, ErrorBoundary, Show} from "solid-js";
 import "./App.css";
 import {AdviceCard} from "./AdviceCard";
 
