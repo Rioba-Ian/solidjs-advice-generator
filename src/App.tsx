@@ -9,8 +9,7 @@ const fetchAdvice = async () => {
 };
 
 function App() {
- const [adviceRefetch, setAdviceRefetch] = createSignal<number>(0);
- const [advice] = createResource(adviceRefetch, fetchAdvice);
+ const [advice, {refetch}] = createResource(fetchAdvice);
 
  console.log(advice());
 
@@ -21,7 +20,7 @@ function App() {
      <AdviceCard
       id={advice().id}
       advice={advice().advice}
-      onRefetch={() => setAdviceRefetch((prev) => prev + 1)}
+      onRefetch={refetch}
      />
     </ErrorBoundary>
    </Show>

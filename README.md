@@ -1,3 +1,5 @@
+# solidjs-advice-generator
+
 ## Usage
 
 ```bash
@@ -26,5 +28,3 @@ Your app is ready to be deployed!
 ## Deployment
 
 Learn more about deploying your application with the [documentations](https://vitejs.dev/guide/static-deploy.html)
-
-# solidjs-advice-generator
