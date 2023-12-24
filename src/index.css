@@ -8,5 +8,5 @@ html{
 
 body{
   height: 100dvh;
-  @apply font-serif bg-dark-greyish-blue flex flex-col items-center justify-center
+  @apply font-serif bg-dark-blue flex flex-col items-center justify-center
 }

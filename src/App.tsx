@@ -1,10 +1,11 @@
 import {createSignal} from "solid-js";
 import "./App.css";
+import {AdviceCard} from "./AdviceCard";
 
 function App() {
  return (
   <main>
-   <h1>Advice here</h1>
+   <AdviceCard />
   </main>
  );
 }
