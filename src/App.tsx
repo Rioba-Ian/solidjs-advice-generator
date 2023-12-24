@@ -1,4 +1,4 @@
-import {createResource, createSignal, Show} from "solid-js";
+import {createResource, createSignal, ErrorBoundary, Show} from "solid-js";
 import "./App.css";
 import {AdviceCard} from "./AdviceCard";
 
@@ -9,14 +9,21 @@ const fetchAdvice = async () => {
 };
 
 function App() {
- const [advice] = createResource(fetchAdvice);
+ const [adviceRefetch, setAdviceRefetch] = createSignal<number>(0);
+ const [advice] = createResource(adviceRefetch, fetchAdvice);
 
- console.log(advice);
+ console.log(advice());
 
  return (
   <main>
    <Show when={advice()} fallback={<p>Loading...</p>}>
-    <AdviceCard id={advice().id} advice={advice().advice} />
+    <ErrorBoundary fallback={(err) => err}>
+     <AdviceCard
+      id={advice().id}
+      advice={advice().advice}
+      onRefetch={() => setAdviceRefetch((prev) => prev + 1)}
+     />
+    </ErrorBoundary>
    </Show>
   </main>
  );

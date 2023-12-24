@@ -7,7 +7,7 @@ export type AdviceData = {
  advice: string;
 };
 
-export function AdviceCard(props: AdviceData) {
+export function AdviceCard(props: AdviceData & {onRefetch: () => void}) {
  console.log(props);
 
  return (
@@ -22,7 +22,10 @@ export function AdviceCard(props: AdviceData) {
    </picture>
 
    <div class="relative self-center">
-    <div class="p-4 bg-neon-green rounded-full translate-y-14">
+    <div
+     class="p-4 bg-neon-green rounded-full translate-y-14"
+     onClick={props.onRefetch}
+    >
      <img src={DiceIcon} alt="dice icon" srcset="" />
     </div>
    </div>
