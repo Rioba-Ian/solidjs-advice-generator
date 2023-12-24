@@ -43,5 +43,5 @@ Users should be able to:
 ## Author
 
 - Website - [Rioba Ian](https://www.riobaian.dev)
-- Frontend Mentor - [@riobafelix](https://www.frontendmentor.io/profile/riobaian)
+- Frontend Mentor - [@riobafelix](https://www.frontendmentor.io/profile/Rioba-Ian)
 - Twitter - [@rioba_riri](https://www.twitter.com/rioba_riri)
