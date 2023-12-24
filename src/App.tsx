@@ -15,8 +15,8 @@ function App() {
  console.log(advice());
 
  return (
-  <main>
-   <Show when={advice()} fallback={<p>Loading...</p>}>
+  <main class="mx-auto w-[30rem]">
+   <Show when={advice()} fallback={<p class="text-light-cyan">Loading...</p>}>
     <ErrorBoundary fallback={(err) => err}>
      <AdviceCard
       id={advice().id}

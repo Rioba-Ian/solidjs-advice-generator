@@ -11,7 +11,7 @@ export function AdviceCard(props: AdviceData & {onRefetch: () => void}) {
  console.log(props);
 
  return (
-  <article class="bg-dark-greyish-blue mx-auto min-w-60 w-1/2 rounded-3xl p-8 flex flex-col space-y-4">
+  <article class="bg-dark-greyish-blue mx-auto min-w-60 rounded-3xl p-8 flex flex-col space-y-4">
    <h1 class="text-neon-green uppercase font-bold">Advice #{props.id}</h1>
    <q class="text-light-cyan font-bold text-3xl">{props.advice}</q>
 
@@ -23,7 +23,7 @@ export function AdviceCard(props: AdviceData & {onRefetch: () => void}) {
 
    <div class="relative self-center">
     <div
-     class="p-4 bg-neon-green rounded-full translate-y-14"
+     class="p-4 bg-neon-green rounded-full translate-y-14 hover:shadow-lg hover:shadow-neon-green cursor-pointer"
      onClick={props.onRefetch}
     >
      <img src={DiceIcon} alt="dice icon" srcset="" />
