@@ -2,11 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+*, *::after, *::before{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
 html{
   font-size: 100%;
+  line-height: 1.5;
 }
 
 body{
   height: 100dvh;
+  font-family: 'Manrope' sans-serif;
   @apply font-serif bg-dark-blue flex flex-col items-center justify-center
 }

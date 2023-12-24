@@ -14,7 +14,7 @@ module.exports = {
     "dark-blue": "hsl(218, 23%, 16%)",
    },
    fontFamily: {
-    serif: ["Manrope"],
+    "sans-serif": ["Manrope"],
    },
    fontWeight: {
     bold: 800,
